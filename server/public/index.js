@@ -1,4 +1,4 @@
-const socket = io("ws://localhost:4000");
+const socket = io("https://socket-io-ql62.onrender.com");
 
 const activity = document.querySelector(".activity");
 const msginput = document.querySelector("#messag");
