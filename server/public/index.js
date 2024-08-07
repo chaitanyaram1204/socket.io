@@ -76,8 +76,8 @@ socket.on("activity", (name) => {
 socket.on("userlist", ({ users }) => {
   showUsers(users);
 });
-socket.on("roomlist", ({ users }) => {
-  showRooms(users);
+socket.on("roomlist", ({ rooms }) => {
+  showRooms(rooms);
 });
 function showUsers(users) {
   userslist.textContent = "";
@@ -94,7 +94,7 @@ function showUsers(users) {
 function showRooms(rooms) {
   roomlist.textContent = "";
   if (rooms) {
-    roomlist.innerHTML = `<em>Active rooms</em>`;
+    roomlist.innerHTML = `<em>Active rooms : </em>`;
     rooms.forEach((room, i) => {
       roomlist.textContent += `${room}`;
       if (rooms.length > 1 && i !== rooms.length - 1) {
